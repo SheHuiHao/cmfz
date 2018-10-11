@@ -26,6 +26,7 @@ public class ManagerController {
     @RequestMapping("login")
     public String login( boolean rememberMe, String rcode, HttpServletRequest request, String name, String password) throws UnsupportedEncodingException {
         System.out.println("进入登录");
+        //这是我后加的
             //首先是获取验证码
         HttpSession session = request.getSession();
         String code =(String) session.getAttribute("code");
